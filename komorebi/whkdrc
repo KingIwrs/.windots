@@ -1,0 +1,89 @@
+.shell powershell
+
+# Reload whkd configuration
+# win + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
+win + alt + r           : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+win + shift + r         : komorebic reload-configuration
+
+win + i                 : komorebic toggle-shortcuts
+
+# App shortcuts - these require shell to be pwsh / powershell
+# The apps will be focused if open, or launched if not open
+# win + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
+# win + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
+win + q                 : start wezterm-gui "start nu"
+win + y                 : start wezterm-gui "start -- yazi"
+win + s                 : start 'C:\Program Files\Flameshot\bin\flameshot.exe' gui
+
+win + c                 : komorebic close
+win + m                 : komorebic minimize
+
+# Focus windows
+win + h                 : komorebic focus left
+win + j                 : komorebic focus down
+win + k                 : komorebic focus up
+win + l                 : komorebic focus right
+
+# Move windows
+win + shift + h         : komorebic move left
+win + shift + j         : komorebic move down
+win + shift + k         : komorebic move up
+win + shift + l         : komorebic move right
+win + shift + return    : komorebic promote
+
+# Stack windows
+win + left              : komorebic stack left
+win + down              : komorebic stack down
+win + up                : komorebic stack up
+win + right             : komorebic stack right
+win + oem_1             : komorebic unstack # oem_1 is ;
+win + oem_4             : komorebic cycle-stack previous # oem_4 is [
+win + oem_6             : komorebic cycle-stack next # oem_6 is ]
+
+# Resize
+win + shift + u           : komorebic resize-axis horizontal decrease
+win + shift + i           : komorebic resize-axis vertical increase
+win + shift + o           : komorebic resize-axis vertical decrease
+win + shift + p           : komorebic resize-axis horizontal increase
+
+# Manipulate windows
+win + v                  : komorebic toggle-float
+win + shift + v          : komorebic toggle-monocle
+win + f                  : komorebic scrolling-layout-columns 1
+win + alt + f            : komorebic scrolling-layout-columns 2
+
+# Window manager options
+win + alt + w           : komorebic retile
+win + alt + p           : komorebic toggle-pause
+
+# Workspaces
+win + 1                 : komorebic focus-workspace 0
+win + 2                 : komorebic focus-workspace 1
+win + 3                 : komorebic focus-workspace 2
+win + 4                 : komorebic focus-workspace 3
+win + 5                 : komorebic focus-workspace 4
+win + 6                 : komorebic focus-workspace 5
+win + 7                 : komorebic focus-workspace 6
+win + 8                 : komorebic focus-workspace 7
+win + 9                 : komorebic focus-workspace 8
+win + 0                 : komorebic focus-workspace 9
+
+# Workspaces relative
+win + ctrl + j          : komorebic cycle-workspace next
+win + ctrl + k          : komorebic cycle-workspace previous
+
+# Move windows across workspaces
+win + shift + 1         : komorebic send-to-workspace 0
+win + shift + 2         : komorebic send-to-workspace 1
+win + shift + 3         : komorebic send-to-workspace 2
+win + shift + 4         : komorebic send-to-workspace 3
+win + shift + 5         : komorebic send-to-workspace 4
+win + shift + 6         : komorebic send-to-workspace 5
+win + shift + 7         : komorebic send-to-workspace 6
+win + shift + 8         : komorebic send-to-workspace 7
+win + shift + 9         : komorebic send-to-workspace 8
+win + shift + 0         : komorebic send-to-workspace 9
+
+# Move windows across orkspaces relative
+win + ctrl + shift + j : komorebic cycle-move-to-workspace next
+win + ctrl + shift + k : komorebic cycle-move-to-workspace previous
