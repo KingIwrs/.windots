@@ -1,4 +1,4 @@
 @echo off
 
-sudo %userprofile%\.windots\setup\windows\mklink.bat
-%userprofile%\.windots\setup\windows\install.bat
+sudo %userprofile%\.windots\setup\scripts\mklink.bat
+%userprofile%\.windots\setup\scripts\install.bat
