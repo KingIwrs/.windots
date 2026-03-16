@@ -8,5 +8,10 @@ use = "dedukun/relative-motions"
 rev = "a603d9e"
 hash = "e02a788e5b8ae0fb47fd0193dda589cc"
 
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "46a6b9f"
+hash = "c626ff7f8d9b152fb0a9b875139fb332"
+
 [flavor]
 deps = []
