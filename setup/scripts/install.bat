@@ -13,7 +13,15 @@ winget install -e --id AutoHotkey.AutoHotkey
 winget install -e --id Flow-Launcher.Flow-Launcher
 winget install -e --id sharkdp.bat
 
-winget install -e --id sxyazi.yazi Gyan.FFmpeg 7zip.7zip jqlang.jq oschwartz10612.Poppler sharkdp.fd BurntSushi.ripgrep.MSVC junegunn.fzf ImageMagick.ImageMagick
+winget install -e --id sxyazi.yazi
+winget install -e --id Gyan.FFmpeg
+winget install -e --id 7zip.7zip
+winget install -e --id jqlang.jq
+winget install -e --id oschwartz10612.Poppler
+winget install -e --id sharkdp.fd
+winget install -e --id BurntSushi.ripgrep.MSVC
+winget install -e --id junegunn.fzf
+winget install -e --id ImageMagick.ImageMagick
 
 winget install -e --id GnuWin32.UnZip
 winget install -e --id GnuWin32.Gzip
